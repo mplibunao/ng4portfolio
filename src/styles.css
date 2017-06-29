@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(~font-awesome/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto+Slab");
+html, body, ul, ol, li, form, fieldset, legend, nav {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+li {
+  list-style: none; }
+
+body {
+  font-family: 'Roboto Slab', serif; }
+
+.content {
+  padding-top: 3em; }
+
+/*# sourceMappingURL=styles.scss.map */
+
+/*# sourceMappingURL=styles.css.map */

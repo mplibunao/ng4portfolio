@@ -1,0 +1,7 @@
+@mixin grid($cols, $margin){
+  
+}
+
+@mixin individualWidth($maxWidth, $col){
+  width: calc( #{$maxWidth} / ( #{$col} - 1 ));
+}

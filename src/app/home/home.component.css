@@ -1,0 +1,7 @@
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/media/background/beach-1250_normal_1x.min.jpg") bottom center no-repeat fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; }
+
+/*# sourceMappingURL=home.component.css.map */

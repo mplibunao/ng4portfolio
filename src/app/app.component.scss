@@ -1,0 +1,46 @@
+@import '../scss/mixins';
+@import '../scss/variables';
+
+
+$navLength: 60%;
+$navBrandLength: 40%;
+
+.nav{
+  width: 100%;
+  position:fixed;
+  height: 3em;
+  z-index: 10;
+  top:0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  line-height: 3;
+  a {
+    text-decoration: none;
+    color: $headingColor;
+  }
+
+  ul{
+    display:inline-block;
+  }
+}         
+
+.navbar-brand{
+  float:left;
+  padding:0;
+  margin:0;
+  width: $navBrandLength;
+  text-align: center;
+}
+
+.nav-list{
+  width:$navLength;
+  margin:0;
+  padding:0;
+}
+
+.nav-item{
+  display: inline-block;
+  @include individualWidth($navLength, 4);
+  text-align: center;
+}
+

@@ -1,0 +1,33 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  height: 3em;
+  z-index: 10;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  line-height: 3; }
+  .nav a {
+    text-decoration: none;
+    color: #249bcb; }
+  .nav ul {
+    display: inline-block; }
+
+.navbar-brand {
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 40%;
+  text-align: center; }
+
+.nav-list {
+  width: 60%;
+  margin: 0;
+  padding: 0; }
+
+.nav-item {
+  display: inline-block;
+  width: calc( 60% / ( 4 - 1 ));
+  text-align: center; }
+
+/*# sourceMappingURL=app.component.css.map */
