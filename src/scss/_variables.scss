@@ -1,24 +1,32 @@
+// Fonts
+$headingFont: 'Roboto Slab', serif;
+$contentFont: 'Lato', sans-serif;
+
 // Colors
 $headingColor: #249bcb;
 $contentColor: #c4dce6;
+$linkColor: #7499b2;
+$linkHoverColor: #0e7aa9;
 
 // Background images
 $bgPath: "assets/media/background/";
+$nestedImgPath: '../../assets/media/';
+$nestedBgPath: $nestedImgPath + 'background/';
 
-$home_normal_1x_jpg: "beach-1250_normal_1x.min.jpg";
-$home_normal_2x_jpg: "beach-2500_normal_2x.min.jpg";
-$home_normal_1x_webp: "beach-1250_normal_1x.min.webp";
-$home_normal_2x_webp: "beach-2500_normal_2x.min.webp";
-$home_large_1x_jpg: "beach-1250_normal_1x.min.jpg";
-$home_large_2x_jpg: "beach-3648_large_2x.min.jpg";
-$home_large_1x_webp: "beach-1920_large_1x.min.webp";
-$home_large_2x_webp: "beach-3648_large_2x.min.webp";
+$home_normal_1x_jpg: "beach-1250x950_normal_1x.min.jpg";
+$home_normal_2x_jpg: "beach-2500x1900_normal_2x.min.jpg";
+$home_normal_1x_webp: "beach-1250x950_normal_1x.min.webp";
+$home_normal_2x_webp: "beach-2500x1900_normal_2x.min.webp";
+$home_large_1x_jpg: "beach-1920x1280_normal_1x.min.jpg";
+$home_large_2x_jpg: "beach-3648x2560_large_2x.min.jpg";
+$home_large_1x_webp: "beach-1920x1280_large_1x.min.webp";
+$home_large_2x_webp: "beach-3648x2560_large_2x.min.webp";
 
-$bg_normal_1x_jpg: "hotel-1250_normal_1x.min.jpg";
-$bg_normal_2x_jpg: "hotel-2500_normal_2x.min.jpg";
-$bg_normal_1x_webp: "hotel-1250_normal_1x.min.webp";
-$bg_normal_2x_webp: "hotel-2500_normal_2x.min.webp";
-$bg_large_1x_jpg: "hotel-1250_normal_1x.min.jpg";
-$bg_large_2x_jpg: "hotel-3648_large_2x.min.jpg";
-$bg_large_1x_webp: "hotel-1920_large_1x.min.webp";
-$bg_large_2x_webp: "hotel-3648_large_2x.min.webp";
+$bg_normal_1x_jpg: "hotel-1250x950_normal_1x.min.jpg";
+$bg_normal_2x_jpg: "hotel-2500x1900_normal_2x.min.jpg";
+$bg_normal_1x_webp: "hotel-1250x950_normal_1x.min.webp";
+$bg_normal_2x_webp: "hotel-2500x1900_normal_2x.min.webp";
+$bg_large_1x_jpg: "hotel-1920x1280_normal_1x.min.jpg";
+$bg_large_2x_jpg: "hotel-3648x2560_large_2x.min.jpg";
+$bg_large_1x_webp: "hotel-1920x1280_large_1x.min.webp";
+$bg_large_2x_webp: "hotel-3648x2560_large_2x.min.webp";

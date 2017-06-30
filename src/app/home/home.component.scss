@@ -1,15 +1,22 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
 
-$imgPath: '../../assets/media/background/';
-
 
 
 #home{
-  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$imgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
-  background-size:cover;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
+  
+}
+
+.home{
+  background: -webkit-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+  background: -moz-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+  background: -o-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
 
   .content{
     padding: 40vh 30vw 0 30vw;

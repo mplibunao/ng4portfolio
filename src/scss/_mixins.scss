@@ -5,3 +5,13 @@
 @mixin individualWidth($maxWidth, $col){
   width: calc( #{$maxWidth} / ( #{$col} - 1 ));
 }
+
+@mixin clearFix{
+  &:after{
+    content: "";
+    display: block;
+    clear:both;
+    visibility: hidden;
+    height:0;
+  }
+}

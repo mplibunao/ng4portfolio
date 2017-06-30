@@ -1,4 +1,4 @@
-html, body, ul, ol, li, form, fieldset, legend, nav
+html, body, ul, ol, li, form, fieldset, legend, nav, div, section
 {
   margin:0;
   padding:0;
@@ -11,4 +11,8 @@ h1, h2, h3, h4, h5, h6, p
 
 li{
   list-style: none;
+}
+
+a{
+  text-decoration: none;
 }

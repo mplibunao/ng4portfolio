@@ -1,0 +1,93 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+@import 'responsive';
+
+$bgPath: $nestedBgPath + $bg_normal_1x_jpg;
+
+$imgColWidth: 30%;
+$imgColPad: 10%;
+$contentColLeftMgn: 50px;
+$contentColRightMgn: 25px;
+$contentColWidth: calc(95% - (((#{$imgColWidth} + #{$imgColPad}) + #{$contentColLeftMgn} ) + #{$contentColRightMgn}) );
+
+
+#about-me{
+  background: -webkit-linear-gradient(rgba(0,0,0,.8)), url("#{$bgPath}") bottom center no-repeat fixed;
+  background: -moz-linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.7)), url("#{$bgPath}") bottom center no-repeat fixed;
+  background: -o-linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.7)), url("#{$bgPath}") bottom center no-repeat fixed;
+  background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.7)), url("#{$bgPath}") bottom center no-repeat fixed;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+
+  .content{
+    width: 100%;
+    @include clearFix;
+  }
+
+} //end #about-me
+
+.title{
+  text-align: center;
+  color: $headingColor;
+  width: 100%;
+  margin-top: 10vh;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.img-col{
+  width: $imgColWidth;
+  height: 100%;
+  padding-left:$imgColPad;
+  float:left;
+
+  .img{
+    margin-bottom: 5em;
+    width: 100%;
+  }
+
+  img{
+    border-radius: 50%;
+    display:block;
+    max-width: 100%;
+    height: auto;
+  }
+} // end img-col
+
+.content-col{
+  width: $contentColWidth;
+  height:100%;
+  float:left;
+  padding-left: $contentColLeftMgn;
+  margin-right:$contentColRightMgn;
+
+  .about-me-content{
+    margin-bottom:2em;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 2;
+    color: $contentColor;
+    font-family: $contentFont;
+
+    h2{
+      margin-left: -20px;
+    }
+
+    div{
+      display: inline-block;
+    }
+  } // end about-me-content
+
+  .fa{
+    margin: 15px 5px 0 5px;
+  }
+
+  a{
+    color: $linkColor;
+    &:hover{
+      color: $linkHoverColor;
+    }
+  }
+
+} // end content-col

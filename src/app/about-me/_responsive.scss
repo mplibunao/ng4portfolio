@@ -1,0 +1,22 @@
+
+@media screen and (max-width: 1099px){
+  .img-col{
+    width:0px;
+
+  img{
+    //display:none;
+  }
+}
+
+  .content-col{
+    //width: 100%;
+  }
+  /*
+  #about-me{
+    background: -webkit-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+    background: -moz-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+    background: -o-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$nestedBgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+  }
+  */
+}

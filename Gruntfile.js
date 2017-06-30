@@ -113,6 +113,7 @@ module.exports = function(grunt){
       bg: {
         options: {
           engine: 'im',
+          aspectRatio: false,
           sizes: [{
             width: 1920,
             height: 1280,
@@ -130,6 +131,7 @@ module.exports = function(grunt){
           },
           {
             width: 2500,
+            height:1900,
             suffix: "_normal_2x"
           }]
         },
@@ -139,7 +141,29 @@ module.exports = function(grunt){
           cwd: 'src/assets/media_src/raw/background',
           dest: 'src/assets/media_src/responsive/background'
         }]
+      },
+      profile: {
+        options: {
+          engine: 'im',
+          sizes: [{
+            width: '300px',
+            height: '300px',
+            suffix: "_small_1x"
+          },
+          {
+            width: '600px',
+            height: '600px',
+            suffix: "_small_2x"
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['**/*.{gif,jpg,png,jpeg,JPG}'],
+          cwd: 'src/assets/media_src/raw/about-me',
+          dest: 'src/assets/media_src/responsive/about-me'
+        }]
       }
+      
     },
 
     /* Clear out the images directory if it exists */

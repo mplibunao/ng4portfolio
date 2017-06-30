@@ -1,6 +1,6 @@
 @import url(~font-awesome/css/font-awesome.css);
 @import url("https://fonts.googleapis.com/css?family=Lato|Roboto+Slab");
-html, body, ul, ol, li, form, fieldset, legend, nav {
+html, body, ul, ol, li, form, fieldset, legend, nav, div, section {
   margin: 0;
   padding: 0; }
 
@@ -10,8 +10,11 @@ h1, h2, h3, h4, h5, h6, p {
 li {
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 body {
-  font-family: 'Roboto Slab', serif; }
+  font-family: "Roboto Slab", serif; }
 
 .content {
   padding-top: 3em; }
