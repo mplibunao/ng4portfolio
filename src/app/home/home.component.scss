@@ -6,9 +6,15 @@ $imgPath: '../../assets/media/background/';
 
 
 #home{
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("#{$imgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("#{$imgPath}#{$home_normal_1x_jpg}") bottom center no-repeat fixed;
   background-size:cover;
   width: 100vw;
   height: 100vh;
-  //margin-top:40px;
+
+  .content{
+    padding: 40vh 30vw 0 30vw;
+    text-align: center;
+    color: $contentColor;
+    font-size: 30px;
+  }
 }

@@ -17,17 +17,19 @@
   float: left;
   padding: 0;
   margin: 0;
-  width: 40%;
-  text-align: center; }
+  width: 30%;
+  text-align: center;
+  font-weight: bold; }
 
 .nav-list {
-  width: 60%;
+  width: 50%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  float: right; }
 
 .nav-item {
   display: inline-block;
-  width: calc( 60% / ( 4 - 1 ));
+  width: calc( 50% / ( 4 - 1 ));
   text-align: center; }
 
 /*# sourceMappingURL=app.component.css.map */

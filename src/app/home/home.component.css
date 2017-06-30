@@ -1,7 +1,12 @@
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/media/background/beach-1250_normal_1x.min.jpg") bottom center no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/media/background/beach-1250_normal_1x.min.jpg") bottom center no-repeat fixed;
   background-size: cover;
   width: 100vw;
   height: 100vh; }
+  #home .content {
+    padding: 40vh 30vw 0 30vw;
+    text-align: center;
+    color: #c4dce6;
+    font-size: 30px; }
 
 /*# sourceMappingURL=home.component.css.map */

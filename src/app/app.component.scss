@@ -2,8 +2,9 @@
 @import '../scss/variables';
 
 
-$navLength: 60%;
-$navBrandLength: 40%;
+$navLength: 50%;
+$navPadding: 10px;
+$navBrandLength: 30%;
 
 .nav{
   width: 100%;
@@ -30,12 +31,14 @@ $navBrandLength: 40%;
   margin:0;
   width: $navBrandLength;
   text-align: center;
+  font-weight: bold;
 }
 
 .nav-list{
   width:$navLength;
   margin:0;
   padding:0;
+  float:right;
 }
 
 .nav-item{

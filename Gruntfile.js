@@ -32,7 +32,8 @@ module.exports = function(grunt){
         files: {
           'src/styles.css': 'src/scss/styles.scss',
           'src/app/app.component.css': 'src/app/app.component.scss',
-          'src/app/home/home.component.css': 'src/app/home/home.component.scss'
+          'src/app/home/home.component.css': 'src/app/home/home.component.scss',
+          'src/app/about-me/about-me.component.css': 'src/app/about-me/about-me.component.scss'
           // Add other scss files here
         }
       }
