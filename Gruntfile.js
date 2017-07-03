@@ -73,28 +73,29 @@ module.exports = function(grunt){
 
     imagemin: {
       // Minify all images in media_src and transfer to media
-      webp: {
-        options: {
-          use: [webp()] // plugin to use
-        },
-        files: [{
-          expand:true,
-          cwd: 'src/assets/media_src/responsive',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'src/assets/media',
-          ext: '.min.webp'
-        }]
-      },
+      // Not supported by default in webpack
+      //webp: {
+        //options: {
+          //use: [webp()] // plugin to use
+        //},
+        //files: [{
+          //expand:true,
+          //cwd: 'src/assets/media_src/responsive',
+          //src: ['**/*.{png,jpg,gif}'],
+          //dest: 'src/assets/media',
+          //ext: '.min.webp'
+        //}]
+      //},
       jpg: {
         options: {
           progressive: true
         },
         files: [{
           expand: true,
-          cwd: 'src/assets/media_src/responsive',
+          cwd: 'src/assets/media_src/raw',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'src/assets/media',
-          ext: '.min.jpg'
+          dest: 'src/assets/media_src/compressed',
+          ext: '.jpg'
         }]
       }
       /*
@@ -117,29 +118,20 @@ module.exports = function(grunt){
           sizes: [{
             width: 1920,
             height: 1280,
-            suffix: "_large_1x"
-          },
-          {
-            width: 3648,
-            height: 2560,
-            suffix: "_large_2x"
+            quality: 60
           },
           {
             width: 1250,
             height: 950,
-            suffix: "_normal_1x"
+            quality: 60
           },
-          {
-            width: 2500,
-            height:1900,
-            suffix: "_normal_2x"
-          }]
+          ]
         },
         files: [{
           expand: true,
           src: ['**/*.{gif,jpg,png}'],
-          cwd: 'src/assets/media_src/raw/background',
-          dest: 'src/assets/media_src/responsive/background'
+          cwd: 'src/assets/media_src/compressed/background',
+          dest: 'src/assets/media/background'
         }]
       },
       profile: {
@@ -159,8 +151,8 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           src: ['**/*.{gif,jpg,png,jpeg,JPG}'],
-          cwd: 'src/assets/media_src/raw/about-me',
-          dest: 'src/assets/media_src/responsive/about-me'
+          cwd: 'src/assets/media_src/compressed/about-me',
+          dest: 'src/assets/media/about-me'
         }]
       }
       
@@ -169,7 +161,7 @@ module.exports = function(grunt){
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['src/assets/media', 'src/assets/media_src/responsive']
+        src: ['src/assets/media', 'src/assets/media_src/compressed']
       }
     }
 
@@ -187,7 +179,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-clean');
   
-  grunt.registerTask('images', ['responsive_images', 'imagemin']);
+  grunt.registerTask('images', ['imagemin', 'responsive_images']);
   //grunt.registerTask('test', ['jshint']);
   grunt.registerTask('default', ['sass', 'concat', 'uglify']);
 

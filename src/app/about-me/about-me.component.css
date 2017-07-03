@@ -4,18 +4,21 @@
 
   /*
   #about-me{
-    background: -webkit-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/background/beach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
-    background: -moz-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/background/beach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
-    background: -o-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/background/beach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
-    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/background/beach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
+    background: -webkit-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/backgroundbeach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
+    background: -moz-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/backgroundbeach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
+    background: -o-linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/backgroundbeach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../../assets/media/backgroundbeach-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
   }
   */ }
 #about-me {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8)), url("../../assets/media/background/hotel-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../assets/media/background/hotel-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../assets/media/background/hotel-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../assets/media/background/hotel-1250x950_normal_1x.min.jpg") bottom center no-repeat fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
   background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   height: 100%; }
   #about-me .content {
@@ -27,6 +30,18 @@
       visibility: hidden;
       height: 0; }
 
+@media screen and (min-width: 1500px) {
+  #about-me {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%; } }
 .title {
   text-align: center;
   color: #249bcb;
@@ -39,7 +54,8 @@
   width: 30%;
   height: 100%;
   padding-left: 10%;
-  float: left; }
+  float: left;
+  transition: width 1s ease; }
   .img-col .img {
     margin-bottom: 5em;
     width: 100%; }
@@ -47,14 +63,16 @@
     border-radius: 50%;
     display: block;
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    transition: width 1s ease, border .2s ease, padding .2s ease; }
 
 .content-col {
   width: calc(95% - (((30% + 10%) + 50px ) + 25px) );
   height: 100%;
   float: left;
   padding-left: 50px;
-  margin-right: 25px; }
+  margin-right: 25px;
+  transition: width 1s ease; }
   .content-col .about-me-content {
     margin-bottom: 2em;
     font-size: 18px;
@@ -72,5 +90,45 @@
     color: #7499b2; }
     .content-col a:hover {
       color: #0e7aa9; }
+
+@media screen and (max-width: 835px) {
+  .img-col {
+    width: 20%; }
+
+  .content-col {
+    width: calc(calc(95% - (((30% + 10%) + 50px ) + 25px) ) + 10%); } }
+@media screen and (max-width: 710px) {
+  .img-col {
+    width: 0; }
+    .img-col img {
+      display: none; }
+
+  .content-col {
+    width: 80%; }
+
+  .about-me-content span {
+    display: none; }
+  .about-me-content div {
+    display: block; } }
+/*
+// webp-loader for webpack needed
+Small to Regular Screens
+.webp .backgroundImage{
+  @include bg("../../assets/media/background/hotel-1250x950.min.webp", 0.8, 0.7);
+}
+.no-webp .backgroundImage{
+  @include bg("../../assets/media/background/hotel-1250x950.min.jpg", 0.8, 0.7);
+}
+
+// Big screens
+@media screen and (min-width:1500){
+  .webp .backgroundImage{
+    @include bg("../../assets/media/background/hotel-1920x1280.min.webp", 0.8, 0.7);
+  }
+  .no-webp .backgroundImage{
+    @include bg("../../assets/media/background/hotel-1920x1280.min.jpg", 0.8, 0.7);
+  }
+}
+*/
 
 /*# sourceMappingURL=about-me.component.css.map */

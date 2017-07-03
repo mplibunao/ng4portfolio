@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  navClass: string = 'nav-list-close';
+
+  toggleSideNav(): void{
+    this.navClass === "nav-list-close" ? this.navClass = "nav-list-open" : this.navClass = "nav-list-close";
+  }
+
 }

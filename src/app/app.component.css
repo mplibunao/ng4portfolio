@@ -1,3 +1,7 @@
+.nav-active {
+  background-color: #c4dce6;
+  border-bottom: 3px solid #249bcb; }
+
 .nav {
   width: 100%;
   position: fixed;
@@ -18,62 +22,73 @@
   padding: 0;
   margin: 0;
   width: 30%;
+  color: #249bcb;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: display 1s ease; }
 
 .nav-list {
   width: 50%;
   margin: 0;
   padding: 0;
   float: right;
-  transition: width 1s ease; }
+  transition: width 1s ease, transform .1s, display 1s ease; }
 
 .nav-menu {
   color: #249bcb;
   font-size: 1.5em;
   line-height: 2;
-  float: right;
-  padding-right: 20px;
-  display: none; }
+  position: absolute;
+  left: 20px;
+  z-index: 1000;
+  display: none;
+  cursor: pointer; }
 
 .nav-item {
   display: inline-block;
-  width: calc( 50% / ( 4 - 1 ));
+  margin-right: -4px;
   text-align: center;
-  transition: width 1s; }
+  transition: width .3s ease, border-bottom .3 ease, background-color .3 ease, display 1s ease; }
+  .nav-item:hover {
+    background-color: #c4dce6;
+    border-bottom: 3px solid #249bcb; }
+  .nav-item a {
+    padding: 10px; }
 
-@media screen and (max-width: 1175px) {
-  .nav-list {
-    width: 60%; }
-
-  .nav-item {
-    width: calc( 60% / ( 4 - 1 )); } }
 @media screen and (max-width: 750px) {
   .nav-list {
-    transform: translate(-1000px, 0);
-    -webkit-transform: translate(-1000px, 0);
-    position: absolute;
+    transform: translate(0, -500px);
+    -webkit-transform: translate(0, -500px);
+    position: relative;
+    display: block;
     width: 100%;
-    z-index: 11;
-    transition: width .3s ease, transform .3s ease; }
+    z-index: 11; }
+
+  .navbar-brand {
+    width: 100%;
+    display: block; }
 
   .nav-list-open {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
 
   .nav-list-close {
-    -webkit-transform: translate(-1000px, 0);
-    transform: translate(-1000px, 0); }
+    -webkit-transform: translate(0, -500px);
+    transform: translate(0, -500px); }
 
   .nav-item {
-    /*
     display: list-item;
-    width: 100%;
     text-align: center;
-    border-bottom: 
-    */ }
+    border-top: 1px solid #c4dce6;
+    border-bottom: 1px solid #c4dce6;
+    background: rgba(0, 0, 0, 0.8); }
+    .nav-item a {
+      padding-left: 30%;
+      padding-right: 30%; }
 
   .nav-menu {
-    display: inline-block; } }
+    display: inline-block;
+    z-index: 900; } }
 
 /*# sourceMappingURL=app.component.css.map */

@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
+  // Stores the class name for img
+  imgEffect: string = "imgMouseLeave";
+
+  imgToggleEffect(): void{
+    this.imgEffect === "imgMouseLeave" ? this.imgEffect = "imgMouseEnter" : this.imgEffect = "imgMouseLeave";
+  }
 
   constructor() { }
 
