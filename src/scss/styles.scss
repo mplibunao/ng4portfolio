@@ -14,12 +14,39 @@ body{
   padding-top: 3em;
 }
 
-.webp #about-me{
-  @include bg("assets/media/background/hotel.webp", 0.8, 0.7);
-}
+// background
 
 .webp #home{
-  @include bg("assets/media/background/beach.webp", 0.8, 0.7);
+  @include bg("#{$bgPath}beach-1250x950.webp", 0.3, 0.3);
+}
+.webp #about-me{
+  @include bg("#{$bgPath}hotel-1250x950.webp", 0.8, 0.7);
+}
+
+.no-webp #home{
+  @include bg("#{$bgPath}beach-1250x950.jpg", 0.3, 0.3);
+}
+.no-webp #about-me{
+  @include bg("#{$bgPath}hotel-1250x950.jpg", 0.8, 0.7);
+}
+
+
+
+@media screen and (min-width:1500){
+  .webp #home{
+    @include bg("#{$bgPath}/beach-1920x1280.webp", 0.3, 0.3);
+  }
+
+  .webp #about-me{
+    @include bg("#{$bgPath}/hotel-1920x1280.webp", 0.8, 0.7);
+  }
+
+  .no-webp #home{
+    @include bg("#{$bgPath}beach-1920x1280.jpg", 0.3, 0.3);
+  }
+  .no-webp #about-me{
+    @include bg("#{$bgPath}hotel-1920x1280.jpg", 0.8, 0.7);
+  }
 }
 
 /*# sourceMappingURL=styles.scss.map */

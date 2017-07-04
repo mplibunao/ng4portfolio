@@ -1,24 +1,9 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
 
-
-
-#home{
-  
-
-  //@include bg("#{$nestedBgPath}/beach-1250x950.jpg", 0.3, 0.3);
-
-  .content{
-    padding: 40vh 30vw 30vh 30vw;
-    text-align: center;
-    color: $contentColor;
-    font-size: 30px;
-  }
-}
-
-
-@media screen and (min-width:1500){
-  #home{
-    @include bg("#{$nestedBgPath}/beach-1920x1280.jpg", 0.3, 0.3);
-  }
+.content{
+  padding: 40vh 30vw 30vh 30vw;
+  text-align: center;
+  color: $contentColor;
+  font-size: 30px;
 }

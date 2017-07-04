@@ -1,36 +1,16 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
 
-$bgPath: $nestedBgPath + $bg_normal_1x_jpg;
-
 $imgColWidth: 30%;
 $imgColPad: 10%;
 $contentColLeftMgn: 50px;
 $contentColRightMgn: 25px;
 $contentColWidth: calc(95% - (((#{$imgColWidth} + #{$imgColPad}) + #{$contentColLeftMgn} ) + #{$contentColRightMgn}) );
 
-#about-me{
-  //@include bg("#{$nestedBgPath}/hotel.webp", 0.8, 0.7);
+.content{
+  width: 100%;
+  @include clearFix;
 }
-
-#about-me{
-
-  
-  //@include bg("#{$nestedBgPath}/hotel.webp", 0.8, 0.7);
-  .content{
-    width: 100%;
-    @include clearFix;
-  }
-} //end #about-me
-
-// BG for big screens
-/*
-@media screen and (min-width:1500px){
-  #about-me{
-    @include bg("#{$nestedBgPath}/hotel-1920x1280.jpg", 0.8, 0.7);
-  }
-}
-*/
 
 .title{
   text-align: center;
@@ -133,30 +113,3 @@ $contentColWidth: calc(95% - (((#{$imgColWidth} + #{$imgColPad}) + #{$contentCol
     }
   }
 }
-
-
-// webp-loader for webpack needed
-//Small to Regular Screens
-.webp #about-me{  
-    @include bg("#{$nestedBgPath}/hotel.webp", 0.8, 0.7);
-    background-color: black;
-  
-  //@include bg("#{$nestedBgPath}/hotel-1250x950.webp", 0.8, 0.7);
-}
-.no-webp #about-me{
-    @include bg("#{$nestedBgPath}/hotel.webp", 0.8, 0.7);
-    background-color: black;
-  //@include bg("#{$nestedBgPath}/hotel-1250x950.jpg", 0.8, 0.7);
-}
-
-// Big screens
-/*
-@media screen and (min-width:1500){
-  .webp .backgroundImage{
-    @include bg("#{$nestedBgPath}/hotel-1920x1280.webp", 0.8, 0.7);
-  }
-  .no-webp .backgroundImage{
-    @include bg("#{$nestedBgPath}/hotel-1920x1280.jpg", 0.8, 0.7);
-  }
-}
-*/

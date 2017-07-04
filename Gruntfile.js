@@ -1,4 +1,5 @@
 const webp = require('imagemin-webp');
+const jpegoptim = require('imagemin-jpegoptim');
 
 module.exports = function(grunt){
 
@@ -80,21 +81,22 @@ module.exports = function(grunt){
         },
         files: [{
           expand:true,
-          cwd: 'src/assets/media_src/raw',
+          cwd: 'src/assets/media_src/responsive',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'src/assets/media_src/compressed',
+          dest: 'src/assets/media',
           ext: '.webp'
         }]
       },
       jpg: {
         options: {
-          progressive: true
+          progressive: true,
+          //use: [jpegoptim({progressive:true, max:80})]
         },
         files: [{
           expand: true,
-          cwd: 'src/assets/media_src/raw',
+          cwd: 'src/assets/media_src/responsive',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'src/assets/media_src/compressed',
+          dest: 'src/assets/media',
           ext: '.jpg'
         }]
       },
@@ -119,26 +121,25 @@ module.exports = function(grunt){
           aspectRatio: false,
           sizes: [{
             width: 1920,
-            height: 1280,
-            quality: 60
+            height: 1280
           },
           {
             width: 1250,
-            height: 950,
-            quality: 60
+            height: 950
           },
           ]
         },
         files: [{
           expand: true,
           src: ['**/*.{gif,jpg,png}'],
-          cwd: 'src/assets/media_src/compressed/background',
-          dest: 'src/assets/media/background'
+          cwd: 'src/assets/media_src/raw/background',
+          dest: 'src/assets/media_src/responsive/background'
         }]
       },
       profile: {
         options: {
           engine: 'im',
+          aspectRatio: false,
           sizes: [{
             width: '300px',
             height: '300px',
@@ -153,8 +154,8 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           src: ['**/*.{gif,jpg,png,jpeg,JPG}'],
-          cwd: 'src/assets/media_src/compressed/about-me',
-          dest: 'src/assets/media/about-me'
+          cwd: 'src/assets/media_src/raw/about-me',
+          dest: 'src/assets/media_src/responsive/about-me'
         }]
       }
       
@@ -162,8 +163,11 @@ module.exports = function(grunt){
 
     /* Clear out the images directory if it exists */
     clean: {
-      dev: {
-        src: ['src/assets/media', 'src/assets/media_src/compressed']
+      imgBuild: {
+        src: ['src/assets/media_src/responsive']
+      },
+      clearImg: {
+        src: ['src/assets/media']
       }
     },
 
@@ -191,7 +195,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-imagemagick');
   
   grunt.registerTask('svg', ['imagemagick-convert']);
-  grunt.registerTask('images', ['imagemin', 'responsive_images']);
+  grunt.registerTask('images', ['responsive_images', 'imagemin', 'clean:imgBuild']);
   //grunt.registerTask('test', ['jshint']);
   grunt.registerTask('default', ['sass', 'concat', 'uglify']);
 
