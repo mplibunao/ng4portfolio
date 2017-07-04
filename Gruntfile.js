@@ -74,18 +74,18 @@ module.exports = function(grunt){
     imagemin: {
       // Minify all images in media_src and transfer to media
       // Not supported by default in webpack
-      //webp: {
-        //options: {
-          //use: [webp()] // plugin to use
-        //},
-        //files: [{
-          //expand:true,
-          //cwd: 'src/assets/media_src/responsive',
-          //src: ['**/*.{png,jpg,gif}'],
-          //dest: 'src/assets/media',
-          //ext: '.min.webp'
-        //}]
-      //},
+      webp: {
+        options: {
+          use: [webp()] // plugin to use
+        },
+        files: [{
+          expand:true,
+          cwd: 'src/assets/media_src/raw',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'src/assets/media_src/compressed',
+          ext: '.webp'
+        }]
+      },
       jpg: {
         options: {
           progressive: true

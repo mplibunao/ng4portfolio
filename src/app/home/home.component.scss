@@ -6,7 +6,7 @@
 #home{
   
 
-  @include bg("#{$nestedBgPath}/beach-1250x950.jpg", 0.3, 0.3);
+  //@include bg("#{$nestedBgPath}/beach-1250x950.jpg", 0.3, 0.3);
 
   .content{
     padding: 40vh 30vw 30vh 30vw;

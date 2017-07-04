@@ -1,35 +1,19 @@
-#about-me {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1250x950.jpg);
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%; }
-  #about-me .content {
-    width: 100%; }
-    #about-me .content:after {
-      content: "";
-      display: block;
-      clear: both;
-      visibility: hidden;
-      height: 0; }
+#about-me .content {
+  width: 100%; }
+  #about-me .content:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0; }
 
-@media screen and (min-width: 1500px) {
-  #about-me {
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel-1920x1280.jpg);
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%; } }
+/*
+@media screen and (min-width:1500px){
+  #about-me{
+    @include bg("../../assets/media/background/hotel-1920x1280.jpg", 0.8, 0.7);
+  }
+}
+*/
 .title {
   text-align: center;
   color: #249bcb;
@@ -98,23 +82,39 @@
     display: none; }
   .about-me-content div {
     display: block; } }
-/*
-// webp-loader for webpack needed
-Small to Regular Screens
-.webp .backgroundImage{
-  @include bg("../../assets/media/background/hotel-1250x950.min.webp", 0.8, 0.7);
-}
-.no-webp .backgroundImage{
-  @include bg("../../assets/media/background/hotel-1250x950.min.jpg", 0.8, 0.7);
-}
+.webp #about-me {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black; }
 
-// Big screens
+.no-webp #about-me {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/media/background/hotel.webp);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black; }
+
+/*
 @media screen and (min-width:1500){
   .webp .backgroundImage{
-    @include bg("../../assets/media/background/hotel-1920x1280.min.webp", 0.8, 0.7);
+    @include bg("../../assets/media/background/hotel-1920x1280.webp", 0.8, 0.7);
   }
   .no-webp .backgroundImage{
-    @include bg("../../assets/media/background/hotel-1920x1280.min.jpg", 0.8, 0.7);
+    @include bg("../../assets/media/background/hotel-1920x1280.jpg", 0.8, 0.7);
   }
 }
 */

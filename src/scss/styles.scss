@@ -4,6 +4,7 @@
 
 @import 'reset';
 @import 'variables';
+@import 'mixins';
 
 body{
   font-family: $headingFont;
@@ -11,6 +12,14 @@ body{
 
 .content{
   padding-top: 3em;
+}
+
+.webp #about-me{
+  @include bg("assets/media/background/hotel.webp", 0.8, 0.7);
+}
+
+.webp #home{
+  @include bg("assets/media/background/beach.webp", 0.8, 0.7);
 }
 
 /*# sourceMappingURL=styles.scss.map */
