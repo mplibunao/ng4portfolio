@@ -42,6 +42,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-grunticon": "^2.3.2",
     "grunt-imagemagick": "^0.1.5",
     "grunt-modernizr": "^1.0.2",
     "grunt-responsive-images": "^1.10.1",

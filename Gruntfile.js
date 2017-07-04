@@ -97,17 +97,19 @@ module.exports = function(grunt){
           dest: 'src/assets/media_src/compressed',
           ext: '.jpg'
         }]
-      }
-      /*
-      png: {
+      },
+      svgMin: {
         options: {
-          optimizationLevel: 7,
+          svgoPlugins: [{removeUselessStrokeAndFill: false}]
         },
         files: [{
-          expand: true
+          expand: true,
+          cwd: 'src/assets/media_src/raw/portfolio',
+          src: ['**/*.svg'],
+          dest: 'src/assets/media_src/compressed/portfolio',
+          ext: '.svg'
         }]
       }
-      */
     },
 
     responsive_images: {
@@ -140,12 +142,12 @@ module.exports = function(grunt){
           sizes: [{
             width: '300px',
             height: '300px',
-            suffix: "_small_1x"
+            suffix: "_small_1x",
           },
           {
             width: '600px',
             height: '600px',
-            suffix: "_small_2x"
+            suffix: "_small_2x",
           }]
         },
         files: [{
@@ -163,7 +165,15 @@ module.exports = function(grunt){
       dev: {
         src: ['src/assets/media', 'src/assets/media_src/compressed']
       }
+    },
+
+    "imagemagick-convert": {
+      svg: {
+        args: ['src/assets/media_src/raw/portfolio/*.png', 'src/assets/media_src/raw/portfolio/sample1.svg'],
+      }
     }
+    
+
 
     
 
@@ -178,7 +188,9 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-imagemagick');
   
+  grunt.registerTask('svg', ['imagemagick-convert']);
   grunt.registerTask('images', ['imagemin', 'responsive_images']);
   //grunt.registerTask('test', ['jshint']);
   grunt.registerTask('default', ['sass', 'concat', 'uglify']);

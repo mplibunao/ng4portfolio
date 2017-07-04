@@ -1,6 +1,5 @@
 @import '../../scss/mixins';
 @import '../../scss/variables';
-@import 'responsive';
 
 $bgPath: $nestedBgPath + $bg_normal_1x_jpg;
 
@@ -96,6 +95,7 @@ $contentColWidth: calc(95% - (((#{$imgColWidth} + #{$imgColPad}) + #{$contentCol
 
 } // end content-col
 
+
 @media screen and (max-width: 835px){
   .img-col{
     width:$imgColWidth - 10%;
@@ -128,9 +128,6 @@ $contentColWidth: calc(95% - (((#{$imgColWidth} + #{$imgColPad}) + #{$contentCol
     }
   }
 }
-
-
-
 
 /*
 // webp-loader for webpack needed
