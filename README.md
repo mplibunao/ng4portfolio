@@ -1,5 +1,9 @@
 # Portfolio
 
+### https://impartial-calculator.surge.sh/home
+
+Note: Unfinished Project since I moved to React. Might go back and do this in the future (probably when I learn more about JS tooling like webpack)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
 Redid my portfolio using the new things I learned in web development:
