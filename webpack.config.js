@@ -83,7 +83,7 @@ module.exports = {
       "./src/polyfills.ts"
     ],
     "scripts": [
-      "script-loader!./gruntdist/modernizr-output.js"
+      "script-loader!./src/modernizr-output.js"
     ],
     "styles": [
       "./src/styles.css"
